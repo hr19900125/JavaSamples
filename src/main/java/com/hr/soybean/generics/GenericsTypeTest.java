@@ -43,6 +43,16 @@ public class GenericsTypeTest {
 
         Type actualType = ((ParameterizedType)superClass).getActualTypeArguments()[0];
         System.out.println("p1 actualTypeArguments " + actualType);
+
+        superClass = p2.getClass().getGenericSuperclass();
+        System.out.println("p2 genericSuperclass " + superClass);
+
+//        actualType = ((ParameterizedType)superClass).getActualTypeArguments()[0];
+//        System.out.println("p2 actualTypeArguments " + actualType);
+
+        Type type = p1.getClass();
+        ParameterizedType ptype = (ParameterizedType) type;
+        System.out.println("ptype = " + ptype);
     }
 
 }
